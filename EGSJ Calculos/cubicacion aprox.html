@@ -1,0 +1,91 @@
+<html>
+	<head>
+	<meta charset='UTF-8'>
+	<title>Cubicar aproximadamente</title>
+	</head>
+<script>
+function calcular()
+{
+
+var lado1=Number(document.getElementById("l1").value);
+var lado2=Number(document.getElementById("l2").value);
+var grosor=Number(document.getElementById("gr").value);
+
+//volumen de losa sin bloques
+var volumen_losa=lado1*lado2*grosor;
+
+//numero de bloques aproximados
+	//area
+		var area=lado1*lado2;
+
+var numero_b=area*7;
+
+//volumen de 1 bloque
+
+if(grosor==0.25)
+{
+var ancho_b=0.20;
+}
+
+if(grosor==0.20)
+{
+var ancho_b=0.15;
+}
+
+if(grosor==0.15)
+{
+var ancho_b=0.10;
+}
+
+var volumen_bloque=ancho_b*0.40*0.20;
+
+//volumen de todos los bloques
+var total_b=volumen_bloque*numero_b;
+
+//volumen de losa menos volumen de bloque
+var volumen_hormigon=volumen_losa-total_b;
+
+
+
+horm.value=volumen_hormigon;
+blo_s.value=ancho_b;
+blo_aprox.value=numero_b;
+
+
+}
+</script>
+<body>
+<br>
+<ol>
+<font color="black" face="arial">
+<font color="black" size="6" face="arial">Cubicar Hormigon Aproximadamente</font><p>
+<br>
+ 
+
+Ingrese el ancho de la losa:
+<input type="number" name="l1" id="l1" placeholder="ejm: 10m"><p>
+Ingrese el largo de la losa:
+<input type="number" name="l2" id="l2" placeholder="ejm: 10m"><p>
+Ingrese el grosor de la losa:
+<input type="number" name="gr" id="gr" placeholder="ejm: 0.15m"><p>
+
+<br>
+<br>
+
+Metros cuadrados de hormigon aproximadoss para la losa:
+<input type="text" name="horm" id="horm" disabled><p>
+Medida de Bloque Sugerido:
+<input type="text" name="blo_s" id="blo_s" disabled><p>
+Cantidad de bloques Aproximados:
+<input type="text" name="blo_aprox" id="blo_aprox" disabled><p>
+
+
+
+
+
+
+<input type="button" onClick="calcular()" value="CALCULAR">
+</font><p>
+</ol>
+</body>
+</html>

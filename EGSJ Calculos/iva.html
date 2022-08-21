@@ -1,0 +1,30 @@
+<html>
+	<head>
+	<title>Calcular el IVA</title>
+	</head>
+<script>
+function calcular()
+{
+var subt=Number(document.getElementById("sv").value);
+var iva1=12*subt/100;
+var iva2=iva1;
+var total= subt + iva2;
+to.value=total;
+iva.value=iva2;
+
+}
+</script>
+<body>
+<center>
+Calculadora de IVA<p>
+Ingrese el subtotal:
+<input type="text" name="sv" id="sv"><p>
+IVA:
+<input type="text" name="iva" id="iva" disabled><p>
+Subtotal mas IVA:
+<input type="text" name="to" id="to" disabled><p>
+
+<input type="button" onClick="calcular()" value="CALCULAR">
+</center>
+</body>
+</html>
