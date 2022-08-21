@@ -1,0 +1,159 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	/*background:#004a9b;*/
+	background:#e6e6e6;
+
+}
+
+.logo{
+	width:100%;
+}
+
+header, .main, footer{
+	width:90%;
+	margin:10px auto;
+	max-width:1000px;
+}
+header nav{
+	background:#528fd5;
+	overflow:hidden;
+}
+header nav ul{
+	list-style:none;
+}
+header nav ul li{
+	float:left;
+}
+header nav ul li a{
+	padding:10px 20px;
+	display:block;
+	color:#fff
+	text-decoration:none;
+	color:#fff;
+}
+header nav ul li a:hover{
+	background:#75acec;
+}
+
+.select{
+	background:#75acec;
+}
+
+
+.encabezado{
+	color:#fff;
+	background:#91aece;
+	clear:both;
+	padding:10px 0px;
+	text-align:center;
+}
+.encabezado h2{
+	padding:10px 20px
+}
+
+.numero {
+	color:#fff;
+	background:#000;
+	clear:both;
+	padding:10px 10px;
+	text-align:center;
+	width:14%;
+	margin:auto;
+}
+
+.numero a{
+	padding:5px 5px;
+	display:block;
+	color:#fff
+	text-decoration:none;
+	color:#fff;
+}
+
+.tipo_m{
+	color:#fff;
+	background:#528fd5;
+	clear:both;
+	padding:10px 0px;
+	text-align:center
+}
+.slider{
+	overflow:hidden;
+	width:100%;
+	margin:auto;
+}
+
+.slider ul{
+	padding:0;
+	display:flex;
+	width:400%;
+	
+	animation: cambio 20s infinite alternate;
+}
+.slider li{
+	list-style:none;
+	width:100%;
+}
+.slider img{
+	width:100%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+.galeria{
+	display:flex;
+	width:100%;
+	justify_content:space-around;
+	flex-wrap:wrap;
+	max-width:1000px;
+	margin:auto;
+	
+}
+.galeria img{
+	width:33.3%;
+	height:10%;
+	margin-bottom:1%;
+	objet-fit:cover;
+	animation:escalar 2s ;
+}
+@keyframes escalar{
+	to{
+		transform: scale(1);
+	}
+	from{
+		transform: scale(0.85);
+	}
+}
+
+
+aside{
+	width:30%;
+	background:#ff8000;
+	float:left;
+	padding:15px;
+	margin-bottom:15px;
+	box-sizing:border-box;
+}
+footer{
+	color:#fff;
+	background:#000;
+	clear:both;
+	padding:10px 0px;
+	text-align:center;
+	text-decoration:none;
+}
+
